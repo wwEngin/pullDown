@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>模仿原生下拉</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="lib/iscroll/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--缩放效果-->
+		<script src="lib/zepto/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/iscroll/iscroll-zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var myscroll;
+			function loaded(){
+				//创建IScroll实例
+				myscroll = new IScroll("#wrapper",{
+					//开启滚动滑轮
+					mouseWheel:true,
+					//设置鼠标滑轮的速度    默认值是20
+					mouseWheelSpeed:40,
+					//显示滚动条
+					scrollbars:true,
+//					bindToWrapper:true,
+					//滑轮滚动方向相反
+//					invertWheelDirection:true,
+					//横向滚动
+					scrollX:true,
+					//纵向滚动
+					scrollY:true,
+					//回弹效果  back  bounce 回弹两次  
+//					bounceEasing:"bounce",
+					//回弹时间   默认是600毫秒
+					bounceTime:1200,
+					//标签可以触发点击事件 
+					click:true,
+					//让标签触发一个tap事件
+					tap:true,
+					//开启键盘键
+					keyBindings:true,
+					//滚动条静止后隐藏   只有在滚动时出现
+					fadeScrollbars:true,
+					//clip滚动条伸缩比较小     scale滚动条可以伸缩成小点    伸缩比较大   默认是false
+					shrinkScrollbars:"scale",
+					//拖动滚动条
+					interactiveScrollbars:true,
+					
+					//缩放
+					wheelAction:"zoom",
+					zoom:true,
+					zoomMax:8,
+					zoomMin:1,
+					zoomStart:1,
+					 
+				});	
+				$("li").eq(0).on('tap',function (e) {
+					this.style.background=!this.style.background?'red':'';
+				})
+			};
+			
+			//添加触摸事件，触摸移动 
+			document.addEventListener("touchmove",function (e) {
+				e.preventDefault();
+			},false);
+		</script>
+	</head>
+	<body onload="loaded()">
+		<div id="header">
+			导航条
+		</div>
+		<div id="wrapper">
+			<!--scroller iscroll 主要内容-->
+			<div id="scroller">
+				<ul>
+					<li>cell内容1</li>
+					<li><a id="clik" onclick="alert('click')">点我点我</a></li>
+					<li>cell内容3</li>
+					<li>cell内容4</li>
+					<li>cell内容5</li>
+					<li>cell内容6</li>
+					<li><input type="text" /></li>
+					<li>cell内容8</li>
+					<li><input type="checkbox" /></li>
+					<li>cell内容10</li>
+					<li>cell内容11</li>
+					<li>cell内容12</li>
+					<li>cell内容13</li>
+					<li>cell内容14</li>
+					<li>cell内容15</li>
+					<li>cell内容16</li>
+					<li>cell内容17</li>
+					<li>cell内容18</li>
+					<li>cell内容19</li>
+					<li>cell内容20</li>
+					<li>cell内容21</li>
+					<li>cell内容22</li>
+					<li>cell内容23</li>
+					<li>cell内容24</li>
+					<li>cell内容25</li>
+					<li>cell内容26</li>
+					<li>cell内容27</li>
+					<li>cell内容28</li>
+					<li>cell内容29</li>
+					<li>cell内容30</li>
+					<li>cell内容31</li>
+					<li>cell内容32</li>
+					<li>cell内容33</li>
+					<li>cell内容34</li>
+					<li>cell内容35</li>
+					<li>cell内容36</li>
+					<li>cell内容37</li>
+					<li>cell内容38</li>
+					<li>cell内容39</li>
+					<li>cell内容40</li>
+					<li>cell内容41</li>
+					<li>cell内容42</li>
+					<li>cell内容43</li>
+					<li>cell内容44</li>
+					<li>cell内容45</li>
+					<li>cell内容46</li>
+					<li>cell内容47</li>
+					<li>cell内容48</li>
+					<li>cell内容49</li>
+					<li>cell内容50</li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer"></div>
+		
+		
+	</body>
+</html>

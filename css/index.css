@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding:0;
+}
+body{
+	font-size: 18px;
+	color: gray;
+	overflow: hidden;
+}
+#header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*一般就是64*/
+	height: 64px;
+	line-height: 64px;
+	background-color: greenyellow;
+	text-align: center;
+}
+#footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background-color: #444;
+	border: 1px solid #333333;
+}
+#wrapper{
+	position: absolute;
+	top: 64px;
+	bottom: 48px;
+	width: 100%;
+	background-color: #ccc;
+	overflow: hidden;
+}
+#scroller{
+	position: absolute;
+	width: 100%;
+}
+#scroller ul{
+	list-style: none;
+	width: 100%;
+	text-align: left;
+}
+#scroller ul li{
+	height: 50px;
+	border-bottom: 1px solid #869791;
+	line-height: 50px;
+}
